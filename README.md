@@ -26,3 +26,5 @@
   * Spyder, pypy, ...  - maybe referring more to shablona
 
 https://drivendata.github.io/cookiecutter-data-science/
+
+Something about naming conventions?
