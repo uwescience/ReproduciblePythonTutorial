@@ -24,8 +24,12 @@
   * Nbconvert
   * css styles for notebook
   * Spyder, pypy, ...  - maybe referring more to shablona
+  * Binder (Microsoft Notebooks?)
+  
 
 https://drivendata.github.io/cookiecutter-data-science/
 
 Something about naming conventions?
 Recloning.
+
+
