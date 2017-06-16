@@ -1,4 +1,4 @@
-# ReproduciblePythonTutorial
+# Reproducible Python Tutorial
 
 * Directory Structure
 * Cross-platform Directory Paths
