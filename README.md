@@ -24,3 +24,5 @@
   * Nbconvert
   * css styles for notebook
   * Spyder, pypy, ...  - maybe referring more to shablona
+
+https://drivendata.github.io/cookiecutter-data-science/
