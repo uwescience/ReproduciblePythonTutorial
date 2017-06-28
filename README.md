@@ -11,7 +11,7 @@
 |   +-- processed
 |
 +-- src
-|   +-- submodules
+|   +-- PythonModules
 |   +-- tests
 |   
 +-- notebooks
@@ -21,7 +21,8 @@
 +-- references
 |   +-- papers
 |   +-- tutorials
-| 
+|
++-- results 
 +-- README.md
 +-- LICENSE.txt
 ```
@@ -29,7 +30,7 @@
 Comprehensive Project Templates:
 
 * [Data Science Cookiecutter](https://drivendata.github.io/cookiecutter-data-science/#contributing)
-* [Shablona - Python Package Template] (https://github.com/uwescience/shablona)
+* [Shablona](https://github.com/uwescience/shablona) - Python Package Template]
 
 	
 ### Cross-platform Directory Paths
@@ -54,26 +55,54 @@ Comprehensive Project Templates:
 ### Testing
 ---
 * Locally 
+	* [nose](http://nose.readthedocs.io/en/latest/)
 
-```
-	pip install nose
-```
+	```
+		pip install nose
+	```
+
+	For each function write a test function:
+
+	```
+	+-- src
+	|   +-- PythonModules
+	|       +-- function1.py
+	|       +-- function2.py 
+	|   +-- tests
+	|       +-- test_function1.py
+	|       +-- test_function2.py
+	```
+	Use [`numpy.testing`](https://docs.scipy.org/doc/	numpy-1.12.0/reference/routines.testing.html) module.
+
+	Run the tests:
+
+	```bash
+		nosetests
+	```
+
+	* [pytest](https://docs.pytest.org/en/latest/)
+	* [Jenkins](https://jenkins.io/) -  automatic testing, needs to be configured	 	 
+
+
+
 
 
 * Remotely:
-	*  [Travis-CI (free for public repos)](https://travis-ci.org/)
+	*  [Travis-CI](https://travis-ci.org/) (free for public repos)
+		* specification by a [travis.yml](https://github.com/scikit-learn/scikit-learn/blob/master/.travis.yml)
 	*  [AppVeyor (for Windows)](https://www.appveyor.com/) 
 	*  [CircleCI](https://circleci.com/)
 	*  [Wercker](http://www.wercker.com/) (based on [Docker](https://www.docker.com/) containters)
 	*  [Jenkins](https://jenkins.io/) - need to configure it
 
-	Coverage
-	* [Coveralls](https://coveralls.io/)
-
-	Testing:
-	unit testing
-	integration testing
-	regression testing
+	Types of tests:
+	
+	* unit testing
+	* integration testing
+	* regression testing
+	* functional testing 
+	
+	Test Coverage - [Coveralls](https://coveralls.io/)
 	
 
 
@@ -84,11 +113,11 @@ Conda vs pip
 
 What is Conda? 
 
-* Conda distribution is slightly different from the default python distribution.
+* Anaconda is a Python distribution slightly different from the default Python distribution, and comes with its own package manager (conda).
 
 * Conda packages come in the form of .whl files (wheel files). They are precompiled packages: i.e. they are compiled for each specific operating system. 
 They are fast to install. (Installing Numpy from scratch takes forever compiling C code)
-Anaconda/ Miniconda(bare bones)
+Miniconda is even faster to install as it is bare bones: better for deploying: have only what you need.
 
 What is [pip](https://pip.pypa.io/en/stable/)?
 
@@ -115,8 +144,15 @@ Pure Python: [virtualenv](https://virtualenv.pypa.io/en/stable/)
 If using anaconda distribution create envs by:
 
 ```
-conda create --name newEnv python=2 extra_packages
+	conda create --name newEnv python=2 extra_packages
 ```
+
+View environments:
+
+```
+	conda env list
+```
+
 On Unix:
 
 ```
@@ -136,22 +172,45 @@ deactivate
 ```
 
 Saving environments:
+
 ```
-conda env export -f exported_env.yml
+	conda env export -f exported_env.yml
 ```
 
+Load an environment from .yml file:
+
+```
+	conda env create -f exported_env.yml
+```
+
+You can do the same thing with pip:
+
+```
+	pip freeze > requirements.txt
+	pip install -r requirements.txt
+```
+
+* Make sure to instal Jupyter within virtual environment
+
+#### More Virtualization
+ 
+ * [Docker](https://www.docker.com/) 
+ * [Vagrant](https://www.vagrantup.com/) 
+ *  AWS public AMIs 
+ *  friend's laptop
+
+#### Modules & Packages
+---
 
 
-  
-Trick with 2 distributions under Jupyter notebook???
-* Saving environments (.yml, pip freeze, pip install -r)
-* Installing Jupyter within virtual environment
-* Workflows with notebooks: 
-  * move function to a module
+  * move functions from notebooks to a module
   * paths for modules
   * reloading modules
-  * submodules
-  *
+    * python2 vs python3
+  * install module - setup.py
+  * submodules 
+     *	put `__init__.py` in every folder
+  
   
 
 #### Editors
@@ -160,31 +219,40 @@ Trick with 2 distributions under Jupyter notebook???
   * [Atom](https://atom.io/) - coloring in Github (extra packages)
   * [JupyterLab](https://) (web based -> can run on server)
   * [Spyder](https://pythonhosted.org/spyder/) Matlab-like IDE
-  	* [PEP8](https://pythonhosted.org/spyder/) - linters
+  
+ Linters 
+ 	* for [PEP8](https://www.python.org/dev/peps/pep-0008/) style
+  	* for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes)   		
+  	* for both: [flake8](http://flake8.pycqa.org/en/latest/)
+ 
+ Plugins for most editors: e.g. [atom flake8 linter](https://atom.io/packages/linter-flake8).
+ 
+
 
 #### Documentation
 ---
-  * [Reveal.js](http://lab.hakim.se/reveal-js/#/):  Jupyter notebook -> slides
-  * [Nbconvert]()
-  * css styles for notebook
-  * [Sphinx](http://www.sphinx-doc.org/en/stable/) readthedocs, ...  - maybe referring more to shablona
-    
+  * [Nbconvert](https://nbconvert.readthedocs.io/en/latest/) - to pdf, to html
+  * [Reveal.js](http://lab.hakim.se/reveal-js/#/):  Jupyter notebook -> slides  ([Instructions](http://veekaybee.github.io/presentations-the-hard-way/))
+  * [css styles for notebook](https://github.com/transcranial/jupyter-themer)
+  * [Sphinx](http://www.sphinx-doc.org/en/stable/) [readthedocs](https://readthedocs.org/) ...  
+  * [gh-pages](https://pages.github.com/ß)
   * [Binder (of notebooks)] (http://mybinder.org/) (free sharing of github jupyter notebooks)(Microsoft Notebooks?)
   * [Jupyter Hub](https://jupyterhub.readthedocs.io/en/latest/) + [Kubernetes](https://kubernetes.io/)
   
-  [Docker](), [Vagrant](), ...
-  
 
   
 
-https://drivendata.github.io/cookiecutter-data-science/
 
-Something about naming conventions?
-Recloning.
-
-[Choosing a License](https://choosealicense.com/)
 
 #### Extra Resources
+[Assessing Reproducibility](https://www.practicereproducibleresearch.org/core-chapters/2-assessment.html)
+
+[R Reproducible Curriculum](https://github.com/Reproducible-Science-Curriculum)
+
+
+
+
+
 
 
 
