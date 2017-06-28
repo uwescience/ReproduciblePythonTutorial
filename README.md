@@ -90,10 +90,10 @@ Comprehensive Project Templates:
 	   
 	   def test_ArraySum:
 	       # testing ArraySum function
-			array1 = np.ones(100)
+			array1 = 2*np.ones(100)
 			array2 = np.ones(100)
 			res = arraySum(array1,array2)
-			npt.assert_allequal(res, np.ones(100))
+			npt.assert_allequal(res, 3*np.ones(100))
 	```
 
 	Run the tests:
