@@ -73,6 +73,28 @@ Comprehensive Project Templates:
 	|       +-- test_function2.py
 	```
 	Use [`numpy.testing`](https://docs.scipy.org/doc/	numpy-1.12.0/reference/routines.testing.html) module.
+	
+	Example:
+	
+	
+	```
+		def ArraySum(array1,array2):
+		   # function which sums two arrays
+			return(array1 + array2)	
+	```
+	
+	
+	```
+	   import numpy as np
+	   
+	   
+	   def test_ArraySum:
+	       # testing ArraySum function
+			array1 = np.ones(100)
+			array2 = np.ones(100)
+			res = arraySum(array1,array2)
+			npt.assert_allequal(res, np.ones(100))
+	```
 
 	Run the tests:
 
@@ -211,6 +233,7 @@ You can do the same thing with pip:
   * install module - setup.py
   * submodules 
      *	put `__init__.py` in every folder
+  * [git submodules](https://github.com/blog/2104-working-with-submodules) 
   
   
 
