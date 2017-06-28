@@ -103,7 +103,8 @@ Comprehensive Project Templates:
 	```
 
 	* [pytest](https://docs.pytest.org/en/latest/)
-	* [Jenkins](https://jenkins.io/) -  automatic testing, needs to be configured	 	 
+	* [Jenkins](https://jenkins.io/) -  automatic testing, needs to be configured	 
+	 
 
 
 
@@ -125,7 +126,8 @@ Comprehensive Project Templates:
 	* functional testing 
 	
 	Test Coverage - [Coveralls](https://coveralls.io/)
-	
+
+* Testing for Data Scientists - (PyData talk)[https://www.youtube.com/watch?v=GEqM9uJi64]	
 
 
 ### Distributions & Package Managers
