@@ -1,6 +1,6 @@
 # Tips for Reproducible Python
 
-#### Directory Structure
+### Directory Structure
 ---
 * 	create an empty project with a base structure 
 
@@ -192,14 +192,15 @@ You can do the same thing with pip:
 
 * Make sure to instal Jupyter within virtual environment
 
-#### More Virtualization
+### More Virtualization
+---
  
  * [Docker](https://www.docker.com/) 
  * [Vagrant](https://www.vagrantup.com/) 
  *  AWS public AMIs 
  *  friend's laptop
 
-#### Modules & Packages
+### Modules & Packages
 ---
 
 
@@ -213,7 +214,7 @@ You can do the same thing with pip:
   
   
 
-#### Editors
+### Editors
 ---
   * [PyCharm](https://www.jetbrains.com/pycharm/) -integration with GitHub
   * [Atom](https://atom.io/) - coloring in Github (extra packages)
@@ -229,7 +230,7 @@ You can do the same thing with pip:
  
 
 
-#### Documentation
+### Documentation
 ---
   * [Nbconvert](https://nbconvert.readthedocs.io/en/latest/) - to pdf, to html
   * [Reveal.js](http://lab.hakim.se/reveal-js/#/):  Jupyter notebook -> slides  ([Instructions](http://veekaybee.github.io/presentations-the-hard-way/))
@@ -237,14 +238,16 @@ You can do the same thing with pip:
   * [Sphinx](http://www.sphinx-doc.org/en/stable/) [readthedocs](https://readthedocs.org/) ...  
   * [gh-pages](https://pages.github.com/ß)
   * [Binder (of notebooks)] (http://mybinder.org/) (free sharing of github jupyter notebooks)(Microsoft Notebooks?)
-  * [Jupyter Hub](https://jupyterhub.readthedocs.io/en/latest/) + [Kubernetes](https://kubernetes.io/)
+  * [Jupyter Hub](https://jupyterhub.readthedocs.io/en/latest/) + [Kubernetes](https://kubernetes.io/) - sharing reliably with many people
+  * [SageMathCloud - CoCalc](http://blog.sagemath.com/cocalc/2017/05/20/smc-is-now-cocalc.html)
   
 
   
 
 
 
-#### Extra Resources
+### Extra Resources
+---
 [Assessing Reproducibility](https://www.practicereproducibleresearch.org/core-chapters/2-assessment.html)
 
 [R Reproducible Curriculum](https://github.com/Reproducible-Science-Curriculum)
