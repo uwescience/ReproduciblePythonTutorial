@@ -230,7 +230,7 @@ You can do the same thing with pip:
   * paths for modules
   * reloading modules
     * python2 vs python3
-  * install module - setup.py
+  * install module as a package - setup.py (distutils)
   * submodules 
      *	put `__init__.py` in every folder
   * [git submodules](https://github.com/blog/2104-working-with-submodules) 
@@ -259,7 +259,7 @@ You can do the same thing with pip:
   * [Reveal.js](http://lab.hakim.se/reveal-js/#/):  Jupyter notebook -> slides  ([Instructions](http://veekaybee.github.io/presentations-the-hard-way/))
   * [css styles for notebook](https://github.com/transcranial/jupyter-themer)
   * [Sphinx](http://www.sphinx-doc.org/en/stable/) [readthedocs](https://readthedocs.org/) ...  
-  * [gh-pages](https://pages.github.com/ß)
+  * [gh-pages](https://pages.github.com/)
   * [Binder (of notebooks)] (http://mybinder.org/) (free sharing of github jupyter notebooks)(Microsoft Notebooks?)
   * [Jupyter Hub](https://jupyterhub.readthedocs.io/en/latest/) + [Kubernetes](https://kubernetes.io/) - sharing reliably with many people
   * [SageMathCloud - CoCalc](http://blog.sagemath.com/cocalc/2017/05/20/smc-is-now-cocalc.html)
@@ -274,6 +274,8 @@ You can do the same thing with pip:
 [Assessing Reproducibility](https://www.practicereproducibleresearch.org/core-chapters/2-assessment.html)
 
 [R Reproducible Curriculum](https://github.com/Reproducible-Science-Curriculum)
+
+[Hitchhikers Guide for packaging](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/)
 
 
 
