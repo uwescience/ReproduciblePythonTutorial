@@ -262,16 +262,17 @@ You can do the same thing with pip:
 
 ### Editors
 ---
-  * [PyCharm](https://www.jetbrains.com/pycharm/) - integration with GitHub
-  * [Atom](https://atom.io/) - coloring in Github (extra packages)
-  * [JupyterLab](https://) (web based -> can run on server)
-  * [Spyder](https://pythonhosted.org/spyder/) Matlab-like IDE
+
+* [PyCharm](https://www.jetbrains.com/pycharm/) - integration with GitHub
+* [Atom](https://atom.io/) - coloring in Github (extra packages)
+* [JupyterLab](https://) (web based -> can run on server)
+* [Spyder](https://pythonhosted.org/spyder/) Matlab-like IDE
   
- Linters 
+  Linters 
  
-    * for [PEP8](https://www.python.org/dev/peps/pep-0008/) style
-    * for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes) 
-    * for both: [flake8](http://flake8.pycqa.org/en/latest/)
+ * for [PEP8](https://www.python.org/dev/peps/pep-0008/) style
+ * for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes) 
+ * for both: [flake8](http://flake8.pycqa.org/en/latest/)
  
  Plugins exist for most editors: e.g. [atom flake8 linter](https://atom.io/packages/linter-flake8).
  
