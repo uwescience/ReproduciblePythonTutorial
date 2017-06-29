@@ -1,4 +1,4 @@
-# Tips for Reproducible Python
+# Tips and Tools for Reproducible Python
 
 ### Directory Structure
 ---
