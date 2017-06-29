@@ -145,7 +145,7 @@ Miniconda is even faster to install as it is bare bones: better for deploying: h
 
 What is [pip](https://pip.pypa.io/en/stable/)?
 
-Package manager for Python. Install packages from [PyPy](https://pypy.org/). There are packages in pip which are not in conda. 
+Package manager for Python. Install packages from [PyPi](https://pypi.python.org/pypi). There are packages in pip which are not in conda. 
 
 
 `pip install` vs `conda install`
