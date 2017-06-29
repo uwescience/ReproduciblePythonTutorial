@@ -30,7 +30,7 @@
 Comprehensive Project Templates:
 
 * [Data Science Cookiecutter](https://drivendata.github.io/cookiecutter-data-science/#contributing)
-* [Shablona](https://github.com/uwescience/shablona) - Python Package Template]
+* [Shablona](https://github.com/uwescience/shablona) - Python Package Template
 
 	
 ### Cross-platform Directory Paths
@@ -130,7 +130,7 @@ Comprehensive Project Templates:
 	
 	Test Coverage - [Coveralls](https://coveralls.io/)
 
-* Testing for Data Scientists - (PyData talk)[https://www.youtube.com/watch?v=GEqM9uJi64]	
+* Testing for Data Scientists - ([PyData talk](https://www.youtube.com/watch?v=GEqM9uJi64))
 
 
 ### Distributions & Package Managers
@@ -235,24 +235,34 @@ You can do the same thing with pip:
   * paths for modules
   * reloading modules
     * python 2:
+    
     	```
     		reload(module_name)
     	```
     * python 3:
-    ```
-    	import imp
-    	imp.reload(module_name)
-    ```
-  * install module as a package - setup.py (distutils)
+    
+       ```
+    		import imp
+    		imp.reload(module_name)
+       ```
+  * install module as a package
+  	 * create a [setup.py](https://packaging.python.org/tutorials/distributing-packages/#setup-py) file
+  
+    * run the setup.py file
+  	
+  		```
+  			python setup.py install package_name
+  		```
+  		and you will be able to import the package from anywhere!
   * submodules 
      *	put `__init__.py` in every folder
-  * [git submodules](https://github.com/blog/2104-working-with-submodules) 
+  * [git submodules](https://github.com/blog/2104-working-with-submodules) - add external github repos to your github project
   
   
 
 ### Editors
 ---
-  * [PyCharm](https://www.jetbrains.com/pycharm/) -integration with GitHub
+  * [PyCharm](https://www.jetbrains.com/pycharm/) - integration with GitHub
   * [Atom](https://atom.io/) - coloring in Github (extra packages)
   * [JupyterLab](https://) (web based -> can run on server)
   * [Spyder](https://pythonhosted.org/spyder/) Matlab-like IDE
@@ -263,7 +273,7 @@ You can do the same thing with pip:
   	* for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes)   		
   	* for both: [flake8](http://flake8.pycqa.org/en/latest/)
  
- Plugins for most editors: e.g. [atom flake8 linter](https://atom.io/packages/linter-flake8).
+ Plugins exist for most editors: e.g. [atom flake8 linter](https://atom.io/packages/linter-flake8).
  
 
 
@@ -273,8 +283,8 @@ You can do the same thing with pip:
   * [Reveal.js](http://lab.hakim.se/reveal-js/#/):  Jupyter notebook -> slides  ([Instructions](http://veekaybee.github.io/presentations-the-hard-way/))
   * [css styles for notebook](https://github.com/transcranial/jupyter-themer)
   * [Sphinx](http://www.sphinx-doc.org/en/stable/), [readthedocs](https://readthedocs.org/), ... (automatically generate documentation, integrate with CI)  
-  * [gh-pages](https://pages.github.com/)
-  * [Binder (of notebooks)](http://mybinder.org/) (free sharing of github jupyter notebooks)(Microsoft Notebooks?)
+  * [gh-pages](https://pages.github.com/) - project website based on Jekyll
+  * [Binder (of notebooks)](http://mybinder.org/) (free sharing of github jupyter notebooks)
   * [Jupyter Hub](https://jupyterhub.readthedocs.io/en/latest/) + [Kubernetes](https://kubernetes.io/) - sharing reliably with many people
   * [SageMathCloud - CoCalc](http://blog.sagemath.com/cocalc/2017/05/20/smc-is-now-cocalc.html)
   
