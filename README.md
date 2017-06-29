@@ -242,8 +242,8 @@ You can do the same thing with pip:
     * python 3:
     
        ```
-    		import imp
-    		imp.reload(module_name)
+    		from imp import reload
+    		reload(module_name)
        ```
   * install module as a package
   	 * create a [setup.py](https://packaging.python.org/tutorials/distributing-packages/#setup-py) file
