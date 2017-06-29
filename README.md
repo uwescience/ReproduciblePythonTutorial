@@ -269,9 +269,9 @@ You can do the same thing with pip:
   
  Linters 
  
- 	* for [PEP8](https://www.python.org/dev/peps/pep-0008/) style
-  	* for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes) 
-	* for both: [flake8](http://flake8.pycqa.org/en/latest/)
+    * for [PEP8](https://www.python.org/dev/peps/pep-0008/) style
+    * for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes) 
+    * for both: [flake8](http://flake8.pycqa.org/en/latest/)
  
  Plugins exist for most editors: e.g. [atom flake8 linter](https://atom.io/packages/linter-flake8).
  
