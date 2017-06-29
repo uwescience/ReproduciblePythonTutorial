@@ -65,35 +65,38 @@ Comprehensive Project Templates:
 
 	```
 	+-- src
-	|   +-- PythonModules
-	|       +-- function1.py
-	|       +-- function2.py 
+	|   +-- function1.py
+	|   +-- function2.py
 	|   +-- tests
 	|       +-- test_function1.py
 	|       +-- test_function2.py
 	```
-	Use [`numpy.testing`](https://docs.scipy.org/doc/	numpy-1.12.0/reference/routines.testing.html) module.
+	Use [`numpy.testing`](https://docs.scipy.org/doc/numpy-1.12.0/reference/routines.testing.html) module.
 	
 	Example:
 	
+	`ArraySum.py`:
 	
 	```
-		def ArraySum(array1,array2):
+		def ArraySumFunction(array1,array2):
 		   # function which sums two arrays
 			return(array1 + array2)	
 	```
 	
 	
+	`testArraySum.py`:
+	
 	```
-	   import numpy as np
-	   
-	   
-	   def test_ArraySum:
-	       # testing ArraySum function
-			array1 = 2*np.ones(100)
-			array2 = np.ones(100)
-			res = arraySum(array1,array2)
-			npt.assert_allequal(res, 3*np.ones(100))
+	import numpy as np
+	from numpy import testing as npt
+	import ArraySum
+
+	def test_ArraySumFunction():
+		# testing ArraySum function
+		array1 = 2*np.ones(100)
+    	array2 = np.ones(100)
+    	res = ArraySum.ArraySumFunction(array1,array2)
+    	npt.assert_equal(res, 3*np.ones(100))
 	```
 
 	Run the tests:
@@ -231,7 +234,15 @@ You can do the same thing with pip:
   * move functions from notebooks to a module
   * paths for modules
   * reloading modules
-    * python2 vs python3
+    * python 2:
+    	```
+    		reload(module_name)
+    	```
+    * python 3:
+    ```
+    	import imp
+    	imp.reload(module_name)
+    ```
   * install module as a package - setup.py (distutils)
   * submodules 
      *	put `__init__.py` in every folder
@@ -247,6 +258,7 @@ You can do the same thing with pip:
   * [Spyder](https://pythonhosted.org/spyder/) Matlab-like IDE
   
  Linters 
+ 
  	* for [PEP8](https://www.python.org/dev/peps/pep-0008/) style
   	* for errors: [pyflakes](https://pypi.python.org/pypi/pyflakes)   		
   	* for both: [flake8](http://flake8.pycqa.org/en/latest/)
@@ -260,9 +272,9 @@ You can do the same thing with pip:
   * [Nbconvert](https://nbconvert.readthedocs.io/en/latest/) - to pdf, to html
   * [Reveal.js](http://lab.hakim.se/reveal-js/#/):  Jupyter notebook -> slides  ([Instructions](http://veekaybee.github.io/presentations-the-hard-way/))
   * [css styles for notebook](https://github.com/transcranial/jupyter-themer)
-  * [Sphinx](http://www.sphinx-doc.org/en/stable/) [readthedocs](https://readthedocs.org/) ...  
+  * [Sphinx](http://www.sphinx-doc.org/en/stable/), [readthedocs](https://readthedocs.org/), ... (automatically generate documentation, integrate with CI)  
   * [gh-pages](https://pages.github.com/)
-  * [Binder (of notebooks)] (http://mybinder.org/) (free sharing of github jupyter notebooks)(Microsoft Notebooks?)
+  * [Binder (of notebooks)](http://mybinder.org/) (free sharing of github jupyter notebooks)(Microsoft Notebooks?)
   * [Jupyter Hub](https://jupyterhub.readthedocs.io/en/latest/) + [Kubernetes](https://kubernetes.io/) - sharing reliably with many people
   * [SageMathCloud - CoCalc](http://blog.sagemath.com/cocalc/2017/05/20/smc-is-now-cocalc.html)
   
